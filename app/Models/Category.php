@@ -14,4 +14,11 @@ class Category extends Model
         'name',
         'description',
     ];
+
+    // relazione con altre tabelle 
+    public function products()
+    {
+
+        return $this->belongsToMany(Product::class);
+    }
 }

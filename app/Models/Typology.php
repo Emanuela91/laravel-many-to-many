@@ -14,4 +14,11 @@ class Typology extends Model
         'name',
         'digital',
     ];
+
+    // realzioni tra tabelle 
+    public function products()
+    {
+
+        return $this->hasMany(Product::class);
+    }
 }
